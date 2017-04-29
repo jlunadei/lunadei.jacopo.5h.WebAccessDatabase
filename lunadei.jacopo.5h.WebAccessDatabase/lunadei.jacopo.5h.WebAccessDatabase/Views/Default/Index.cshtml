@@ -1,0 +1,15 @@
+﻿@using System.Data
+@model System.Data.DataTable
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@using (Html.BeginForm("Query1", "Default", FormMethod.Post))
+{
+    <p>
+        Title1: @Html.TextBox("Query", "Select * from Agenzie") <br />
+        <input type="submit" value="Filter" />
+    </p>
+}
